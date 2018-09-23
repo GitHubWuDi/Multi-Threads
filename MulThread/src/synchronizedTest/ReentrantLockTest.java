@@ -1,9 +1,9 @@
 package synchronizedTest;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
-import synchronizedTest.VolatileTest.SaveMoneyThread;
 
 public class ReentrantLockTest {
 
@@ -13,6 +13,7 @@ public class ReentrantLockTest {
 	  
 	  
 	  public static void saveMoney(int money){
+		  
 		  lock.lock();//上锁
 		  try{
 			  count+=money;

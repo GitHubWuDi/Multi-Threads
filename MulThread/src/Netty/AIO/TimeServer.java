@@ -7,7 +7,8 @@ public class TimeServer {
 	
 	public static void main(String[] args) {
           
-	
+	      AsyncTimeServerHandler timeServer = new AsyncTimeServerHandler(port);
+	      new Thread(timeServer,"AIO-AsyncTimeServerHandler-001").start();
 	
 	}
 	
